@@ -44,7 +44,8 @@ export default {
               document.getElementById(i).innerHTML ==
                 document.getElementById(numb2).innerHTML
             ){
-                alert("dotka now");
+                alert("dotka now"); 
+                
             }
         }
       }
