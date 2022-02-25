@@ -105,7 +105,7 @@ export default {
         } else if (num == 3) {
           this.scoreXs3++;
           this.scoreXr1++;
-          this.scoreXs1++;
+          this.scoreXZp++;
         } else if (num == 4) {
           this.scoreXr2++;
           this.scoreXs1++;
