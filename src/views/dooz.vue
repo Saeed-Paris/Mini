@@ -2,51 +2,51 @@
   <div>
     <div>
       <button
-        :class="{ inDanger: flagZero == true }"
+       
         id="1"
         @click="addXO(1)"
       ></button
       ><button
-        :class="{ inDanger: flagZero == true }"
+       
         id="2"
         @click="addXO(2)"
       ></button
       ><button
-        :class="{ inDanger: flagZero == true }"
+       
         id="3"
         @click="addXO(3)"
       ></button>
     </div>
     <div>
       <button
-        :class="{ inDanger: flagZero == true }"
+       
         id="4"
         @click="addXO(4)"
       ></button
       ><button
-        :class="{ inDanger: flagZero == true }"
+       
         id="5"
         @click="addXO(5)"
       ></button
       ><button
-        :class="{ inDanger: flagZero == true }"
+       
         id="6"
         @click="addXO(6)"
       ></button>
     </div>
     <div>
       <button
-        :class="{ inDanger: flagZero == true }"
+       
         id="7"
         @click="addXO(7)"
       ></button
       ><button
-        :class="{ inDanger: flagZero == true }"
+       
         id="8"
         @click="addXO(8)"
       ></button
       ><button
-        :class="{ inDanger: flagZero == true }"
+       
         id="9"
         @click="addXO(9)"
       ></button>
@@ -105,7 +105,7 @@ export default {
         } else if (num == 3) {
           this.scoreXs3++;
           this.scoreXr1++;
-          this.scoreXs1++;
+          this.scoreXZp++;
         } else if (num == 4) {
           this.scoreXr2++;
           this.scoreXs1++;

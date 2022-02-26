@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import barname from '../views/barname.vue'
 import dooz from '../views/dooz.vue'
+import dooz2 from '@/views/dooz2.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -31,6 +32,10 @@ const routes = [{
         path:"/dooz",
         name:"dooz",
         component:dooz
+    }, {
+        path:"/dooz2",
+        name:"dooz2",
+        component:dooz2
     },
     
 ]
