@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       nobat: 0,
+      XO: "",
     };
   },
   methods: {
@@ -34,32 +35,32 @@ export default {
     checkers(numb2) {
       let baghimande = 15 - numb2;
       let nesf = Math.floor(baghimande / 2);
-
       if (numb2 > 5) {
         for (let i = baghimande - 1; i > nesf; i--) {
           if (i != numb2) console.log(i, baghimande - i);
           if (
-              document.getElementById(numb2).innerHTML ==
-                document.getElementById(baghimande - i).innerHTML &&
-              document.getElementById(i).innerHTML ==
-                document.getElementById(numb2).innerHTML
-            ){
-                alert("dotka now"); 
-                
-            }
+            document.getElementById(numb2).innerHTML ==
+              document.getElementById(baghimande - i).innerHTML &&
+            document.getElementById(i).innerHTML ==
+              document.getElementById(numb2).innerHTML
+          ) {
+            alert(`bazikon e shomare ${this.XO} barande sshaaaad `);
+            this.$router.go(0);
+          }
         }
       }
       if (numb2 <= 5) {
         for (let i = 9; i > baghimande - i; i--) {
           if (i != numb2 && numb2 != baghimande - i) {
-              console.log( document.getElementById(numb2).innerHTML)
+            console.log(i, 15 - i - numb2);
             if (
               document.getElementById(numb2).innerHTML ==
                 document.getElementById(baghimande - i).innerHTML &&
               document.getElementById(i).innerHTML ==
                 document.getElementById(numb2).innerHTML
             ) {
-              alert("dotka now");
+              alert(`bazikon e shomare ${this.XO} barande sshaaaad `);
+              this.$router.go(0);
             }
           }
         }
@@ -74,6 +75,15 @@ export default {
         chosen.innerHTML = "O";
       }
       this.nobat++;
+    },
+  },
+  watch: {
+    nobat(newValue) {
+      if (newValue % 2 == 0) {
+        this.XO = "X";
+      } else {
+        this.XO = "O";
+      }
     },
   },
 };
