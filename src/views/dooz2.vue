@@ -66,7 +66,7 @@ export default {
         }
       }
     },
-    addXO(num) {
+    addXO(num) { 
       let chosen = document.getElementById(num);
       chosen.style.pointerEvents = "none";
       if (this.nobat % 2 == 0) {
