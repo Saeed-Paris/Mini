@@ -1,17 +1,42 @@
 <template>
   <div class="about">
-    <h1></h1>
+   
+      <ul id="example-1">
+        
+      </ul>
+    
   </div>
 </template>
 <script>
 export default {
-  // mounted(){
-  //   if(this.$cookie.get('token')){
+  data() {
+    return {};
+  },
+  methods: {
+    // func(item) {
+    //   console.log(item);
+    // },
+    mounted() {
+      for (var key in localStorage) { 
+        if (key > 999) {
+          let item = localStorage.getItem(key);
+          let li = document.createElement("li");
+
+          li.innerText = item;
+
+          document.getElementById("example-1").appendChild(li);
+
       
-  //   }
-  //   this.$cookie.delete('token'array.tos)
-  //   this.$cookie.set('token',token,9)
-  //   this.$cookie.set('token',token)
-  // }
-}
-</script>
+        }
+      }
+    },
+    // mounted(){
+    //   if(this.$cookie.get('token')){
+    //   }
+    //   this.$cookie.delete('token'array.tos)
+    //   this.$cookie.set('token',token,9)
+    //   this.$cookie.set('token',token)
+    // }
+  },
+};
+</script> 
